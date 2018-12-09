@@ -20,7 +20,7 @@
 
 #### NPM
 ```
-package not published
+npm i vue-scrollmagic --save
 ```
 
 ## Usage

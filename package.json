@@ -1,8 +1,8 @@
 {
   "name": "vue-scrollmagic",
   "description": "Scrollmagic plugin for Vue.js",
-  "version": "1.0.0",
-  "private": true,
+  "version": "1.0.1",
+  "private": false,
   "main": "dist/vue-scrollmagic.common.js",
   "unpkg": "dist/vue-scrollmagic.umd.js",
   "files": [
