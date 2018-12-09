@@ -1,0 +1,57 @@
+{
+  "name": "vue-scrollmagic",
+  "description": "Scrollmagic plugin for Vue.js",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/vue-scrollmagic.common.js",
+  "unpkg": "dist/vue-scrollmagic.umd.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "lint": "vue-cli-service lint",
+    "prepublish": "npm run compile",
+    "build:demo": "vue-cli-service build --dest=demo",
+    "build:lib": "vue-cli-service build --target lib --name vue-scrollmagic src/plugin/index.js",
+    "compile": "npm run build:lib && npm run build:demo",
+    "deploy": "git push"
+  },
+  "dependencies": {
+    "scrollmagic": "^2.0.6",
+    "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-plugin-eslint": "^3.2.1",
+    "@vue/cli-service": "^3.2.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "lint-staged": "^7.2.2",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magr0s/vue-scrollmagic.git"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "author": "magr0s <magr0s.ak@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magr0s/vue-scrollmagic/issues"
+  },
+  "homepage": "https://github.com/magr0s/vue-scrollmagic#readme"
+}
