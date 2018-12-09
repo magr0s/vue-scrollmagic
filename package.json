@@ -5,6 +5,9 @@
   "private": true,
   "main": "dist/vue-scrollmagic.common.js",
   "unpkg": "dist/vue-scrollmagic.umd.js",
+  "files": [
+    "dist/*", "*.md"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
@@ -12,7 +15,8 @@
     "build:demo": "vue-cli-service build --dest=demo",
     "build:lib": "vue-cli-service build --target lib --name vue-scrollmagic src/plugin/index.js",
     "compile": "npm run build:lib && npm run build:demo",
-    "deploy": "git push"
+    "deploy": "git push",
+    "publish": "npm publish"
   },
   "dependencies": {
     "scrollmagic": "^2.0.6",
