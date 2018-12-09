@@ -1,4 +1,10 @@
-# Vue Scrollmagic
+# Vue Scrollmagic ![Current version](https://img.shields.io/badge/dynamic/json.svg?label=version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fmagr0s%2Fvue-scrollmagic%2Fmaster%2Fpackage.json&query=version&colorB=orange&style=flat-square)
+
+[![Build Status](https://travis-ci.org/magr0s/vue-scrollmagic.svg?branch=master)](https://travis-ci.org/magr0s/vue-scrollmagic)
+![Vue.js version](https://img.shields.io/badge/dynamic/json.svg?label=vue.js&url=https%3A%2F%2Fraw.githubusercontent.com%2Fmagr0s%2Fvue-scrollmagic%2Fmaster%2Fpackage.json&query=dependencies.vue&colorB=blue&style=flat-square)
+![Vue.js version](https://img.shields.io/badge/dynamic/json.svg?label=ScrollMagic&url=https%3A%2F%2Fraw.githubusercontent.com%2Fmagr0s%2Fvue-scrollmagic%2Fmaster%2Fpackage.json&query=dependencies.scrollmagic&colorB=blue&style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-lightgrey.svg?&style=flat-square)
+
 
 [ScrollMagic](http://scrollmagic.io/) plugin for Vue.js
 
@@ -50,7 +56,7 @@ See [ScrollMagic API](http://scrollmagic.io/docs/index.html) and [Example](https
 ```js
 Vue.use(VueScrollmagic, {
   verical: true,
-  globalSceneOptions: {}.
+  globalSceneOptions: {},
   loglevel: 2,
   refreshInterval: 100
 })
