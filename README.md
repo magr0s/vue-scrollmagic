@@ -68,19 +68,20 @@ this.$scrollmagic.handleScrollTo = function (target) {
 ```
 
 #### Methods
-Name | Description
-- | - | -
-scene | A Scene defines where the controller should react and how.
-addScene | Add one ore more scene(s) to the controller.
-destroy | Destroy the controller, all scenes and everything.
-removeScenes | Remove one ore more scene(s) from the controller.
-scrollTo | Scroll to a numeric scroll offset, a DOM element, the start of a scene or provide an alternate method for scrolling.
-update | Updates the controller params and calls updateScene on every scene, that is attached to the controller.
-updateScene | Update one ore more scene(s) according to the scroll position of the container.
-enabled | Get or Set the current enabled state of the controller.
-loglevel | Get or Set the current loglevel option value.
-scrollPos | Get the current scrollPosition or Set a new method to calculate it. When used as a setter this method prodes a way to permanently overwrite the controller's scroll position calculation.
-info | Get all infos or one in particular 
+
+|Name | Description|
+|- | - |
+|scene | A Scene defines where the controller should react and how.|
+|addScene | Add one ore more scene(s) to the controller.|
+|destroy | Destroy the controller, all scenes and everything.|
+|removeScenes | Remove one ore more scene(s) from the controller.|
+|scrollTo | Scroll to a numeric scroll offset, a DOM element, the start of a scene or provide an alternate method for |scrolling.|
+|update | Updates the controller params and calls updateScene on every scene, that is attached to the controller.|
+|updateScene | Update one ore more scene(s) according to the scroll position of the container.|
+|enabled | Get or Set the current enabled state of the controller.|
+|loglevel | Get or Set the current loglevel option value.|
+|scrollPos | Get the current scrollPosition or Set a new method to calculate it. When used as a setter this method prodes a |way to permanently overwrite the controller's scroll position calculation.|
+|info | Get all infos or one in particular |
 
 If you want to use plugins configure webpack settings.
 ```js
