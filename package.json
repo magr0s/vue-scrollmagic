@@ -53,5 +53,13 @@
   "bugs": {
     "url": "https://github.com/magr0s/vue-scrollmagic/issues"
   },
-  "homepage": "https://github.com/magr0s/vue-scrollmagic#readme"
+  "homepage": "https://github.com/magr0s/vue-scrollmagic#readme",
+  "keywords": [
+    "scroll",
+    "scrolling",
+    "scrollmagic",
+    "vue",
+    "vue.js",
+    "plugin"
+  ]
 }
