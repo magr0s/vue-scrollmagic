@@ -27,14 +27,14 @@ npm i vue-scrollmagic --save
 
 #### mount with global
 ```js
-import Scrollmagic from 'scrollmagic'
-Vue.use(Scrollmagic)
+import VueScrollmagic from 'vue-scrollmagic'
+Vue.use(VueScrollmagic)
 ```
 #### mount with nuxt.js/ssr
 ```js
 // plugins/vue-scrollmagic.js
-import Scrollmagic from 'scrollmagic'
-Vue.use(Scrollmagic)
+import VueScrollmagic from 'vue-scrollmagic'
+Vue.use(VueScrollmagic)
 
 // nuxt.config.js
 {
@@ -94,6 +94,7 @@ If you want to use plugins configure webpack settings.
 // vue.config.js
 module.exports = {
   chainWebpack: config => {
+    //only dev mode
     if (process.env.NODE_ENV === 'development') {
       config.resolve.alias
         .set('ScrollMagic', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js')
