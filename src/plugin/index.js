@@ -1,4 +1,6 @@
 import Scrollmagic from 'scrollmagic'
+import 'debug.addIndicators'
+import 'animation.gsap'
 
 const VueScrollmagic = {
   install (Vue, options) {
@@ -8,7 +10,7 @@ const VueScrollmagic = {
           controller_: new Scrollmagic.Controller(Object.assign(options || {}, {
             container: window
           })),
-          handleScroll: null
+          handleScrollTo: null
         }
       },
 
@@ -65,7 +67,7 @@ const VueScrollmagic = {
       },
 
       watch: {
-        handleScroll (handle) {
+        handleScrollTo: function (handle) {
           this.controller_.scrollTo = handle
         }
       }

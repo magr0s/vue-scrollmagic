@@ -1,17 +1,18 @@
 {
   "name": "vue-scrollmagic",
   "description": "Scrollmagic plugin for Vue.js",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "private": false,
   "main": "dist/vue-scrollmagic.common.js",
   "unpkg": "dist/vue-scrollmagic.umd.js",
   "files": [
-    "dist/*", "*.md"
+    "dist/*",
+    "*.md"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
-    "prepublish": "npm run compile",
+    "prepublish": "npm run lint && npm run compile",
     "build:demo": "vue-cli-service build --dest=demo",
     "build:lib": "vue-cli-service build --target lib --name vue-scrollmagic src/plugin/index.js",
     "compile": "npm run build:lib && npm run build:demo",
@@ -19,6 +20,7 @@
     "publish": "npm publish"
   },
   "dependencies": {
+    "gsap": "^2.0.2",
     "scrollmagic": "^2.0.6",
     "vue": "^2.5.17"
   },

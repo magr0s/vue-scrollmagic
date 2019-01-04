@@ -17,6 +17,9 @@
 </template>
 
 <script>
+import { TweenMax, Elastic } from 'gsap'
+import 'ScrollToPlugin'
+
 export default {
   data () {
     return {
@@ -48,29 +51,35 @@ export default {
   },
 
   created () {
-    window.addEventListener('scroll', this.handleScroll)
+    this.$scrollmagic.handleScrollTo = function (target) {
+      TweenMax.to(window, 1.5, {
+        scrollTo: {
+          y: target,
+          autoKill: false
+        }
+      })
+    }
   },
 
   mounted () {
     const scene = this.$scrollmagic.scene({
       triggerElement: '#trigger',
       triggerHook: 0,
-      duration: '50%'
+      duration: '50%',
+      reverse: true
     })
 
     this.$scrollmagic.addScene(
       scene
-        .on('enter', function () {
-          document.querySelector('.info').classList.add('red-bg')
-        })
-        .on('leave', function () {
-          document.querySelector('.info').classList.remove('red-bg')
-        })
+        .setTween(
+          TweenMax.from('.info', 20, {
+            autoAlpha: 0,
+            yPercent: 50,
+            ease: Elastic.easeInOut
+          })
+        )
+        .addIndicators()
     )
-  },
-
-  destroyed () {
-    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>

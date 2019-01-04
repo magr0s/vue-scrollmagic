@@ -73,6 +73,22 @@ this.$scrollmagic.handleScrollTo = function (target) {
 ...
 ```
 
+#### Set custom scrollTo handle with GSAP animation
+```js
+import { TweenMax } from 'gsap'
+import 'ScrollToPlugin'
+...
+this.$scrollmagic.handleScrollTo = function (target) {
+  TweenMax.to(window, 1.5, {
+    scrollTo: {
+      y: target,
+      autoKill: false
+    }
+  })
+}
+...
+```
+
 #### Methods
 
 |Name | Description|
@@ -89,36 +105,7 @@ this.$scrollmagic.handleScrollTo = function (target) {
 |scrollPos | Get the current scrollPosition or Set a new method to calculate it. When used as a setter this method prodes a |way to permanently overwrite the controller's scroll position calculation.|
 |info | Get all infos or one in particular |
 
-If you want to use plugins configure webpack settings.
-```js
-// vue.config.js
-module.exports = {
-  chainWebpack: config => {
-    //only dev mode
-    if (process.env.NODE_ENV === 'development') {
-      config.resolve.alias
-        .set('ScrollMagic', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js')
-        .set('debug.addIndicators', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js')
-    }
-  }
-}
-
-// webpack.config.js
-// maybe need use `npm i -SD path` 
-...
-resolve: {
-    alias: {
-      ...
-      ScrollMagic: path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
-      'debug.addIndicators': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js')
-    },
-  },
-...
-
-// src/main.js
-...
-import 'debug.addIndicators'
-```
+__NOTE__: In package adds plugins 'gsap.animation' and 'debug.addIndicators'
 
 ## Development
 
