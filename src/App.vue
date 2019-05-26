@@ -59,6 +59,8 @@ export default {
         }
       })
     }
+
+    window.addEventListener('scroll', this.handleScroll)
   },
 
   mounted () {
@@ -80,6 +82,10 @@ export default {
         )
         .addIndicators()
     )
+  },
+
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
