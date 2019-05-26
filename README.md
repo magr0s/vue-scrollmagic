@@ -96,7 +96,7 @@ this.$scrollmagic.handleScrollTo = function (target) {
 |scene | A Scene defines where the controller should react and how.|
 |addScene | Add one ore more scene(s) to the controller.|
 |destroy | Destroy the controller, all scenes and everything.|
-|removeScenes | Remove one ore more scene(s) from the controller.|
+|removeScene | Remove one ore more scene(s) from the controller.|
 |scrollTo | Scroll to a numeric scroll offset, a DOM element, the start of a scene or provide an alternate method for |scrolling.|
 |update | Updates the controller params and calls updateScene on every scene, that is attached to the controller.|
 |updateScene | Update one ore more scene(s) according to the scroll position of the container.|
