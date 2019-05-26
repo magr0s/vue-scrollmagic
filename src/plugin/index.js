@@ -23,8 +23,8 @@ const VueScrollmagic = {
           return this.controller_.destroy(resetScenes = false)
         },
 
-        removeScenes (scene) {
-          this.controller_.removeScenes(scene)
+        removeScene (scene) {
+          this.controller_.removeScene(scene)
         },
 
         scrollTo (scrollTarget, additionalParameter) {
