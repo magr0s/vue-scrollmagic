@@ -11,6 +11,7 @@
 * [Install](#Install)
 * [Usage](#Usage)
 * [Documentation](#Documentation)
+* [Example](#Example)
 * [Development](#Development)
 * [Autor](#Autor)
 * [License](#License)
@@ -106,6 +107,37 @@ this.$scrollmagic.handleScrollTo = function (target) {
 |info | Get all infos or one in particular |
 
 __NOTE__: In package adds plugins 'gsap.animation' and 'debug.addIndicators'
+
+## Example
+
+```js
+mounted() {
+  // Declare Scene
+  const scene2 = this.$scrollmagic.scene({
+    // ID of element where animation starts
+    triggerElement: '#trigger2',
+
+    // {0,0.5,1} - animations starts from {top,center,end} of window
+    triggerHook: 0.5,
+
+    // Duration of animation
+    duration: 300
+  })
+    // Declaration of animation and attaching to element
+    .setTween('#animate2', { 
+      css: { 
+        borderTop: '30px solid white', 
+        backgroundColor: 'blue' 
+      }, 
+      scale: 0.7 // the tween durtion can be omitted and defaults to 1
+    })
+    // Helpful tags for orientation on the screen
+    .addIndicators({ name: '2 (duration: 300)' })
+
+  // Add Scene to controller
+  this.$scrollmagic.addScene(scene2)
+}
+```
 
 ## Development
 

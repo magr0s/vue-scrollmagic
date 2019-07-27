@@ -10,6 +10,8 @@
       <span class="info-item">Container: {{ this.scrollContainer }}</span>
       <span class="info-item">Is element: {{ info.isDocument }}</span>
     </div>
+    <div id="trigger2"></div>
+    <div id="animate2">Animated</div>
     <div class="app-footer">
       <a href="#" @click.prevent="$scrollmagic.scrollTo(0)">Back to top</a>
     </div>
@@ -37,16 +39,6 @@ export default {
   computed: {
     scrollContainer () {
       return (this.info.container === window) ? 'window' : this.info.container.tagName
-    }
-  },
-
-  methods: {
-    updateInfo () {
-      this.info = this.$scrollmagic.info()
-    },
-
-    handleScroll (evt) {
-      this.updateInfo()
     }
   },
 
@@ -82,10 +74,45 @@ export default {
         )
         .addIndicators()
     )
+
+    // Declare Scene
+    const scene2 = this.$scrollmagic.scene({
+      // ID of element where animation starts
+      triggerElement: '#trigger2',
+
+      // {0,0.5,1} - animations starts from {top,center,end} of window
+      triggerHook: 0.5,
+
+      // Duration of animation
+      duration: 300
+    })
+      // Declaration of animation and attaching to element
+      .setTween('#animate2', {
+        css: {
+          borderTop: '30px solid white',
+          backgroundColor: 'blue'
+        },
+        scale: 0.7 // the tween durtion can be omitted and defaults to 1
+      })
+      // Helpful tags for orientation on the screen
+      .addIndicators({ name: '2 (duration: 300)' })
+
+    // Add Scene to controller
+    this.$scrollmagic.addScene(scene2)
   },
 
   destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
+  },
+
+  methods: {
+    updateInfo () {
+      this.info = this.$scrollmagic.info()
+    },
+
+    handleScroll (evt) {
+      this.updateInfo()
+    }
   }
 }
 </script>
@@ -106,6 +133,12 @@ body {
   &-title {
     margin-top: 60px;
     text-align:center;
+  }
+
+  #animate2 {
+    border: 1px solid white;
+    background-color: grey;
+    padding: 10px;
   }
 
   &-footer {
