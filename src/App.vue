@@ -90,9 +90,9 @@ export default {
       .setTween('#animate2', {
         css: {
           borderTop: '30px solid white',
-          backgroundColor: 'blue'
-        },
-        scale: 0.7 // the tween durtion can be omitted and defaults to 1
+          backgroundColor: 'blue',
+          scale: 0.7 // the tween durtion can be omitted and defaults to 1
+        }
       })
       // Helpful tags for orientation on the screen
       .addIndicators({ name: '2 (duration: 300)' })

@@ -5,6 +5,7 @@
 ![Vue.js version](https://img.shields.io/badge/dynamic/json.svg?label=ScrollMagic&url=https%3A%2F%2Fraw.githubusercontent.com%2Fmagr0s%2Fvue-scrollmagic%2Fmaster%2Fpackage.json&query=dependencies.scrollmagic&colorB=blue&style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey.svg?&style=flat-square)
 
+### This is a fun project. If you want to support this project [![BuyMeACoffee](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png)](https://www.buymeacoffee.com/PpQJNnmDa)
 
 [ScrollMagic](http://scrollmagic.io/) plugin for Vue.js
 
@@ -127,9 +128,9 @@ mounted() {
     .setTween('#animate2', { 
       css: { 
         borderTop: '30px solid white', 
-        backgroundColor: 'blue' 
-      }, 
-      scale: 0.7 // the tween durtion can be omitted and defaults to 1
+        backgroundColor: 'blue',
+        scale: 0.7 // the tween durtion can be omitted and defaults to 1
+      }
     })
     // Helpful tags for orientation on the screen
     .addIndicators({ name: '2 (duration: 300)' })
