@@ -4,8 +4,7 @@
 ![Vue.js version](https://img.shields.io/badge/dynamic/json.svg?label=vue.js&url=https%3A%2F%2Fraw.githubusercontent.com%2Fmagr0s%2Fvue-scrollmagic%2Fmaster%2Fpackage.json&query=dependencies.vue&colorB=blue&style=flat-square)
 ![Vue.js version](https://img.shields.io/badge/dynamic/json.svg?label=ScrollMagic&url=https%3A%2F%2Fraw.githubusercontent.com%2Fmagr0s%2Fvue-scrollmagic%2Fmaster%2Fpackage.json&query=dependencies.scrollmagic&colorB=blue&style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey.svg?&style=flat-square)
-
-### This is a fun project. If you want to support this project [![BuyMeACoffee](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png)](https://www.buymeacoffee.com/PpQJNnmDa)
+[![BuyMeACoffee](https://camo.githubusercontent.com/cd005dca0ef55d7725912ec03a936d3a7c8de5b5/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6275792532306d6525323061253230636f666665652d646f6e6174652d79656c6c6f772e737667)](https://www.buymeacoffee.com/PpQJNnmDa)
 
 [ScrollMagic](http://scrollmagic.io/) plugin for Vue.js
 
