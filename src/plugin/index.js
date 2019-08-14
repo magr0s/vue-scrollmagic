@@ -3,24 +3,45 @@ import 'debug.addIndicators'
 import 'animation.gsap'
 
 const VueScrollmagic = {
-  install (Vue, options) {
+  install (Vue, options = {}) {
     const scrollmagic = {
       data () {
         return {
-          controller_: new Scrollmagic.Controller(Object.assign(options || {}, {
+          controller_: new Scrollmagic.Controller({
+            ...options,
             container: window
-          })),
+          }),
           handleScrollTo: null
         }
       },
 
       methods: {
+        attachTo (els, options = {}) {
+          if (els instanceof Element) {
+            els.$scrollmagic = new Scrollmagic.Controller({
+              ...options,
+              container: els
+            })
+          } else if (!!els && els instanceof NodeList) {
+            for (let i = 0; i < els.length; i++) {
+              const el = els[i]
+
+              el.$scrollmagic = new Scrollmagic.Controller({
+                ...options,
+                container: el
+              })
+            }
+          } else {
+            throw new Error('Error! You can only attach the controller to Element or NodeList.')
+          }
+        },
+
         addScene (newScene) {
           this.controller_.addScene(newScene)
         },
 
         destroy (resetScenes = false) {
-          return this.controller_.destroy(resetScenes = false)
+          return this.controller_.destroy(resetScenes)
         },
 
         removeScene (scene) {
