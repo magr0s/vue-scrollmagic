@@ -94,6 +94,7 @@ this.$scrollmagic.handleScrollTo = function (target) {
 
 |Name | Description|
 |- | - |
+|attachTo | Create scrollmagic controller to custom element. After creating the controller, you have access to your own Scrollmagic.Controller methods. |
 |scene | A Scene defines where the controller should react and how.|
 |addScene | Add one ore more scene(s) to the controller.|
 |destroy | Destroy the controller, all scenes and everything.|
@@ -136,6 +137,22 @@ mounted() {
 
   // Add Scene to controller
   this.$scrollmagic.addScene(scene2)
+
+  const scene3 = this.$scrollmagic.scene({
+    triggerElement: '#box-inner', // set trigger on inner element
+    triggerHook: 0,
+    duration: '100%'
+  })
+    .setTween(
+      // Declaration of animation and attaching to element
+    )
+    .addIndicators()
+
+  // Attaching scrollmagic controller to element
+  this.$scrollmagic.attachTo(this.$refs.scrollBox)
+
+  // Add scene to element scrollmagic controller
+  this.$refs.scrollBox.$scrollmagic.addScene(scene3)
 }
 ```
 
