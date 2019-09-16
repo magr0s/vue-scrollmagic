@@ -56,7 +56,7 @@ See [ScrollMagic API](http://scrollmagic.io/docs/index.html) and [Example](https
 #### Configure controller
 ```js
 Vue.use(VueScrollmagic, {
-  verical: true,
+  vertical: true,
   globalSceneOptions: {},
   loglevel: 2,
   refreshInterval: 100
